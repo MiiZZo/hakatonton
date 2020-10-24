@@ -6,7 +6,7 @@ import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 export default function EventPage() {
   return (
     <>
-    <Box m="0 auto" maxW={1550}>
+    <Box m="0 auto" maxW={1670}>
       <HeaderTop  />
       
       

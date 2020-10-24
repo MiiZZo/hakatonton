@@ -7,11 +7,11 @@ export default {
 export function HeaderTop() {
   return (
     <Flex justifyContent="space-between" alignItems="center" mb="100px">
-      <Link href="#" fontSize={53} fontWeight={900} pl="50px" _focus={{ border: "none" }}>
+      <Link href="/vacancies" fontSize={53} fontWeight={900} pl="50px" _focus={{ border: "none" }}>
         <i>SKFU</i>
       </Link>
       <Flex justifyContent="space-between" mr="50px">
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
+        <Link href="/vacancies" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
             className="GreenHover"
             opacity="0"
@@ -27,7 +27,7 @@ export function HeaderTop() {
           ></Box>
           Главная
         </Link>
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
+        <Link href="/events" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
              className="GreenHover"
             zIndex={-1}
@@ -41,7 +41,7 @@ export function HeaderTop() {
             h={250}
             w={250}
           ></Box>
-          Крутая Главная
+          Мероприятия
         </Link>
         <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
@@ -57,9 +57,9 @@ export function HeaderTop() {
             h={250}
             w={250}
           ></Box>
-          Мега Главная
+          Контакты
         </Link>
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
+        <Link href="personal-account" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
             className="GreenHover"
             opacity="0"
@@ -73,7 +73,7 @@ export function HeaderTop() {
             h={250}
             w={250}
           ></Box>
-          Снова Главная
+          Личный кабинет
         </Link>
       </Flex>
       <Image src="/Ellipse 1.svg" h="40px" w="40px" mr="50px"></Image>

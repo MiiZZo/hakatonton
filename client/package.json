@@ -9,6 +9,11 @@
     "format": "prettier --write \"**/*.ts\" \"**/*.tsx\" \"**/*.js\""
   },
   "dependencies": {
+    "@bit/primefaces.primereact.chart": "^4.2.0",
+    "@bit/recharts.recharts.cartesian-grid": "^1.6.2",
+    "@bit/recharts.recharts.composed-chart": "^1.6.2",
+    "@bit/recharts.recharts.legend": "^1.6.2",
+    "@bit/recharts.recharts.line-chart": "^1.6.2",
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",

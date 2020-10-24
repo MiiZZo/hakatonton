@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chart } from '@bit/primefaces.primereact.chart';
+import { Footer } from "../features/footer/footer"
 
 const data = {
   labels: ['Работают по специальности', 'Работают не по специальности'],

@@ -6,6 +6,7 @@ import YAxis from '@bit/recharts.recharts.y-axis';
 import CartesianGrid from '@bit/recharts.recharts.cartesian-grid';
 import Tooltip from '@bit/recharts.recharts.tooltip';
 import Legend from '@bit/recharts.recharts.legend';
+import { Footer } from "../features/footer/footer"
 
 const data = [
 	{

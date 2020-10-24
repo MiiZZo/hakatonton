@@ -6,6 +6,7 @@ import { API_URL } from "../constants";
 import { Pagination } from "../features/general/pagination";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { Footer } from "../features/footer/footer"
 
 interface Props {
   vacancies: any[];
@@ -77,6 +78,8 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
               <Pagination current={pageNumber} total={pageCount} onChange={handleChangePage}/>
             </Box>
       </Flex>
+
+      <Footer />
     </>
   );
 }

@@ -84,21 +84,21 @@ export default function AboutVacancies() {
         <Box mb="30px"><Button background="#27AE60" color="#fff" fontSize="18px" _hover={{ background: "#27AE60" }} _focus={{ outline: 'none' }}>Отправить свою заявку</Button></Box>
             <NewCards
               title="Верстальщик"
-              price="от 60000 руб."
+              salaryFrom="от 60000 руб."
               name="Петров Иван Иванович"
               city="г. Боровичи"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
             />
             <NewCards
               title="Оператор склада / Кладовщик - Комплектовщик"
-              price="от 43000 руб."
+              salaryFrom="от 43000 руб."
               name="Маскаль Иван Иванович"
               city="г. Боровичи"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
             />
             <NewCards
               title="Водитель-курьер на автомобиле"
-              price="от 32000 руб."
+              salaryFrom="от 32000 руб."
               name="Петрович Иван Иванович"
               city="г. Боровичи"
               text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"

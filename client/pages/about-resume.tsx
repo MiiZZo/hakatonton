@@ -19,7 +19,7 @@ export default function AboutVacancies() {
         >
           <Box>
             <Heading as="h3" fontSize={24}>
-              Название вакансии
+              Название резюме
         </Heading>
             <Flex mt={3}>
               <Box padding="0 7px" color="#2D9CDB" border="1px solid #2D9CDB" mr={4} fontSize="12px">
@@ -39,7 +39,7 @@ export default function AboutVacancies() {
               <Box borderRadius="50%" w={86} h={86} backgroundColor="#ccc"></Box>
               <Box>
                 <Box fontSize={24} ml={6} fontWeight="550">
-                  ООО “Моя оборона”
+                  Студент: Путяга номер 8 
             </Box>
                 <Box fontSize={24} ml={6} fontWeight="550">
                   г. Новоебенёво
@@ -71,16 +71,16 @@ export default function AboutVacancies() {
             <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
             <Box fontSize={24} mt={10} fontWeight="550">
               Мы предлагаем
-        </Box>
+            </Box>
             <Box fontSize={18} mt={5}>
               – это, другое, третье, пятое, десятьое.
         </Box>
             <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
             <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-            <Box fontSize={18} mb={10}>
+            <Box fontSize={18} mb={5}>
               – это, другое, третье, пятое, десятьое.
         </Box>
-
+        <Box mb="30px"><Button background="#27AE60" color="#fff" fontSize="18px" _hover={{ background: "#27AE60" }} _focus={{ outline: 'none' }}>Отправить свою заявку</Button></Box>
             <NewCards
               title="Верстальщик"
               price="от 60000 руб."

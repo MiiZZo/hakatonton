@@ -1,6 +1,7 @@
 import { NewCards } from "../features/vacancies/vacancy-card/vacancy-card";
 import { HeaderTop } from "../features/header/header";
 import { Button, Box, Flex, Select, Image, Stack, Tag, TagLabel, TagCloseButton, Heading } from "@chakra-ui/core";
+import { Footer } from "../features/footer/footer"
 
 
 export default function AboutVacancies() {
@@ -89,6 +90,8 @@ export default function AboutVacancies() {
           </Box>
         </Box>
       </Box>
+
+      <Footer />
     </>
   );
 }

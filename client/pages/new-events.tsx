@@ -2,6 +2,7 @@ import { NewEvent } from "../features/event/new-event/new-event";
 import { HeaderTop } from "../features/header/header";
 import { Flex, Button, Grid, Box, Heading, SimpleGrid } from "@chakra-ui/core";
 import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu/vacancy-left-menu";
+import { Footer } from "../features/footer/footer"
 
 export default function NewEventPage() {
   return (
@@ -42,6 +43,8 @@ export default function NewEventPage() {
           </Box>
         </Flex>
       </Box>
+
+      <Footer />
     </>
   );
 }

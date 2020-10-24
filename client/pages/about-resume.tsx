@@ -1,6 +1,6 @@
 import { HeaderTop } from "../features/header/header";
 import { NewCards } from "../features/vacancies/vacancy-card/vacancy-card";
-
+import { Footer } from "../features/footer/footer"
 import { Button, Box, Flex, Heading } from "@chakra-ui/core";
 
 export default function AboutVacancies() {
@@ -90,6 +90,8 @@ export default function AboutVacancies() {
           </Box>
         </Box>
       </Box>
+
+      <Footer />
     </>
   );
 }

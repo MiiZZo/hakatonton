@@ -3,6 +3,7 @@ import { NewCards } from "../features/vacancies/vacancy-card/vacancy-card";
 import { HeaderTop } from "../features/header/header";
 import { Button, Box, Flex, Select, Image, Stack, Tag, TagLabel, TagCloseButton } from "@chakra-ui/core";
 import { NewCardsAccount } from "../features/new-cards-personal/new-cards-personal"
+import { Footer } from "../features/footer/footer"
 
 
 export default function PersonalAccount() {
@@ -54,6 +55,8 @@ export default function PersonalAccount() {
                     <NewCardsAccount />
                 </Box>
             </Flex>
+            
+            <Footer />
         </>
     );
 }

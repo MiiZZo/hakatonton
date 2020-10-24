@@ -9,7 +9,8 @@ function MyApp({ Component, pageProps }) {
     firstName: "",
     lastName: "",
     email: "",
-    phoneNumber: ""
+    phoneNumber: "",
+    resumes: null
   });
 
   const handleSetUser = (userData: Partial<User["user"]>) => {

@@ -1,5 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { IsEmail } from "class-validator";
+import { Resume } from "../resumes/resume.entity";
 
 @Entity()
 export class JobSeeker {
@@ -21,6 +22,9 @@ export class JobSeeker {
 
     @Column({ nullable: true })
     phoneNumber!: string;
+
+    @OneToMany(() => Resume, resume => resume.jobSeeker)
+    resumes!: Resume[];
 
     @Column("date")
     birthDate!: Date;

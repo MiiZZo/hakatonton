@@ -3,6 +3,7 @@ import { JobSeekerService } from "../job-seeker/job-seeker.service";
 
 export const auth = async (req: Request, res: Response, next: NextFunction) => {    
     if (!req?.session?.userId) {
+        res.status(401);
         res.json({
             data: null,
             errors: [{ message: "Вы должны быть авторизованы" }]

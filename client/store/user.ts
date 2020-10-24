@@ -8,6 +8,7 @@ export interface User {
     lastName: string;
     email: string;
     phoneNumber: string;
+    resumes: any[] | null;
   };
   handleSetUser: (userData: Partial<User["user"]>) => void;
 }
@@ -19,7 +20,8 @@ export const UserContext = createContext<User>({
     firstName: "",
     lastName: "",
     email: "",
-    phoneNumber: ""
+    phoneNumber: "",
+    resumes: null,
   },
   handleSetUser: () => {}
 });

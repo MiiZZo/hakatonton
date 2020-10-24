@@ -1,0 +1,10 @@
+.headerLink:hover .GreenHover {
+    opacity: 1;
+    transition: all .5s;
+    transform: rotate(30deg);
+    color: #fff;   
+}
+
+.headerLink:hover {
+    color: #fff;
+}

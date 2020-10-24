@@ -1,6 +1,7 @@
 import { CSSReset, ThemeProvider } from "@chakra-ui/core";
 import { useState } from "react";
 import { User, UserContext } from "../store/user";
+import "../features/style.css";
 
 function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState<User["user"]>({

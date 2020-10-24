@@ -1,5 +1,9 @@
 import { Box, Flex, Image, Link } from "@chakra-ui/core";
 
+export default {
+  breakpoints: ["3", "48em", "62em", "80em"],
+};
+
 export function HeaderTop() {
   return (
     <Flex justifyContent="space-between" alignItems="center" mb="100px">
@@ -10,10 +14,10 @@ export function HeaderTop() {
         <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
             className="GreenHover"
+            opacity="0"
             zIndex={-1}
             position="absolute"
-            transform="rotate(30deg)"
-            left="-120px"
+            left="-110px"
             top="-210px"
             background="#27AE60"
             boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
@@ -23,12 +27,12 @@ export function HeaderTop() {
           ></Box>
           Главная
         </Link>
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative">
+        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
+             className="GreenHover"
             zIndex={-1}
-            display="none"
+            opacity="0"
             position="absolute"
-            transform="rotate(29deg)"
             left="-80px"
             top="-210px"
             background="#27AE60"
@@ -39,13 +43,13 @@ export function HeaderTop() {
           ></Box>
           Крутая Главная
         </Link>
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative">
+        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
+          className="GreenHover"
             zIndex={-1}
             position="absolute"
-            transform="rotate(29deg)"
-            left="-90px"
-            display="none"
+            left="-80px"
+            opacity="0"
             top="-210px"
             background="#27AE60"
             boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
@@ -55,12 +59,12 @@ export function HeaderTop() {
           ></Box>
           Мега Главная
         </Link>
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative">
+        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
           <Box
-            display="none"
+            className="GreenHover"
+            opacity="0"
             zIndex={-1}
             position="absolute"
-            transform="rotate(29deg)"
             left="-80px"
             top="-210px"
             background="#27AE60"

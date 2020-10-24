@@ -9,8 +9,7 @@ export default function NewEventPage() {
       <Box m="0 auto" maxW={1670} padding="0px 20px">
         <HeaderTop />
         <Flex  alignItems="flex-start">
-          <SumLeftMenu />
-
+          <SumLeftMenu handleSearch={() => {}} handleSubmitSearch={() => {}} />
           <Box mt="-65px" w="100%">
             <Flex alignItems="center">
               <Heading fontSize={36} mb="20px" ml="50px">

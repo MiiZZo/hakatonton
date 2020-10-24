@@ -127,22 +127,6 @@ export function NewVacancy() {
         </Box> */}
       </Box>
       <Box maxWidth={626} m="30px auto 10px ">
-        <Heading fontSize={18} mb={10}>
-          Контактные данные
-        </Heading>
-        {/* <FormControl isRequired>
-          <Flex mb="30px">
-            <FormLabel w={300} m="20px 50px 10px 00" color="#000000" fontWeight="550">
-              Вакансия в городе
-            </FormLabel>
-            <Input rounded="4px" placeholder="Text Here" w="70%" m="auto"></Input>
-          </Flex>
-        </FormControl> */}
-      </Box>
-      <Box maxWidth={626} m="30px auto 10px ">
-        <Heading fontSize={18} mb={10}>
-          Дополнительнно
-        </Heading>
         <FormControl isRequired>
           <Flex>
             <FormLabel w={240} m="20px 50px 10px 00" color="#000000" fontWeight="550">

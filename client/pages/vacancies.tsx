@@ -34,7 +34,7 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
     <>
       <HeaderTop />
       <Flex maxW={1670} margin="0 auto" padding="0 20px">
-        <SumLeftMenu />
+        <SumLeftMenu handleSearch={handleSearch} handleSubmitSearch={handleSubmitSearch}/>
             <Box w="1110px" ml="50px">
               <Flex mt="-60px" mb="21px" justifyContent="space-between">
                 <Flex>

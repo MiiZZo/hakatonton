@@ -19,6 +19,8 @@ router.get("/", async (req, res) => {
         { ...vacancy, employer }
       )
     })
+    
+    console.log(vacancies);
 
     const vacanciesCount = vacancies.length;
     const perPage = 10;

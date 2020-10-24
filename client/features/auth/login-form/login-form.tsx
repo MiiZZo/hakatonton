@@ -1,7 +1,7 @@
 import { Button, Input, Box, Checkbox } from "@chakra-ui/core";
 import { useForm } from "react-hook-form";
-import { API_URL } from "../../constants";
-import { User } from "../../store/user";
+import { API_URL } from "../../../constants";
+import { User } from "../../../store/user";
 
 interface Props {
   handleLogin: (userData: Partial<User>) => void;

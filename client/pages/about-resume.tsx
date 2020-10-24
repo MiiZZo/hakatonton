@@ -1,5 +1,5 @@
-import { HeaderTop } from "../features/header";
-import { NewCards } from "../features/vacancies/vacancy-card";
+import { HeaderTop } from "../features/header/header";
+import { NewCards } from "../features/vacancies/vacancy-card/vacancy-card";
 
 import { Button, Box, Flex, Heading } from "@chakra-ui/core";
 

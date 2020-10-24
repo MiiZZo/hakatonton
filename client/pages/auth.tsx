@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { Spinner } from "@chakra-ui/core";
 import { useEffect, useState } from "react";
-import { AuthForm } from "../features/auth/auth-form";
+import { AuthForm } from "../features/auth/auth-form/auth-form";
 import { useUserContext } from "../store/user";
 
 export default function AuthPage() {

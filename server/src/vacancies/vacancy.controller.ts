@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
     });
 
     const vacanciesCount = vacancies.length;
-    const perPage = 10;
+    const perPage = 2;
     const pageCount = Math.ceil(vacanciesCount / perPage);
     let pageNumber = parseInt(page);
 

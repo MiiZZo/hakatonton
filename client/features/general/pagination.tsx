@@ -6,7 +6,7 @@ interface PaginateProps {
   onChange: (pageNumber: number) => void;
 }
 
-const Pagination = ({ current, onChange, total }: PaginateProps) => {
+export const Pagination = ({ current, onChange, total }: PaginateProps) => {
   const paginateButtons: JSX.Element[] = [];
 
   for (let page = current - 4; page < current + 5; page++) {

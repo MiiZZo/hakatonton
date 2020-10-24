@@ -1,9 +1,10 @@
 import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 import { NewCards } from "../features/vacancies/vacancy-card";
 import { HeaderTop } from "../features/header";
-
 import { Button, Box,Flex, Select } from "@chakra-ui/core";
 import { API_URL } from "../constants";
+import { Pagination } from "../features/general/pagination";
+import { useRouter } from "next/router";
 
 interface Props {
   vacancies: any[];
@@ -12,6 +13,12 @@ interface Props {
 }
 
 export default function newSummary({ pageCount, pageNumber, vacancies }: Props) {
+  const router = useRouter();
+  
+  const handleChangePage = (pageNumber: number) => {
+    router.push({ query: { page: pageNumber }  });
+  }
+
   return (
     <>
       <HeaderTop />
@@ -59,6 +66,7 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
                   {...vacancy}
                 />
               ))}
+              <Pagination current={pageNumber} total={pageCount} onChange={handleChangePage}/>
             </Box>
           </Flex>
         </Box>

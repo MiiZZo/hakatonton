@@ -14,14 +14,10 @@ export function Event() {
         <Text m="10px 24px" maxW={252}>
           Lorem ipsum carrots, enhanced undergraduate developer, but they d occaecat time.
         </Text>
-        <Flex maxW="252px" m="0 24px 18px">
-          <Tag size="sm" background="none" border="1px solid red" variantColor="red" mr="5px">
-            IT
-          </Tag>
-          <Tag size="sm" background="none" border="1px solid yellow" variantColor="yellow" mr="5px">
-            SQL
-          </Tag>
-          <Tag size="sm" background="none" variantColor="gray" fontSize="14px">
+        <Flex maxW="252px" m="0 24px 18px" >
+          <Tag size="sm"  mr="5px">IT</Tag>
+          <Tag size="sm"  mr="5px">SQL</Tag>
+          <Tag size="sm" background="none"  fontSize="14px">
             +7
           </Tag>
           <Button ml="42px" h="30px" fontSize="13px" background="none" border="2px solid #3182CE" color="#3182CE">

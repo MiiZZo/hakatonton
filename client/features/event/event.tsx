@@ -24,9 +24,9 @@ export function Event() {
           occaecat time.
         </Text>
         <Flex maxW="252px" m="0 24px 18px" >
-          <Tag size="sm" background="none" border="1px solid red" variantColor="red" mr="5px">IT</Tag>
-          <Tag size="sm" background="none" border="1px solid yellow" variantColor="yellow" mr="5px">SQL</Tag>
-          <Tag size="sm" background="none" variantColor="gray" fontSize="14px">
+          <Tag size="sm"  mr="5px">IT</Tag>
+          <Tag size="sm"  mr="5px">SQL</Tag>
+          <Tag size="sm" background="none"  fontSize="14px">
             +7
           </Tag>
           <Button

@@ -5,6 +5,7 @@ import { Button, Box, Flex, Select, Image, Stack, Tag, TagLabel, TagCloseButton 
 import { StudentCard } from "../features/students/student-card/student-card";
 import Link from "next/link";
 import { API_URL } from "../constants";
+import { Footer } from "../features/footer/footer"
 
 export default function PersonalAccount({ students }) {
     return (
@@ -33,6 +34,8 @@ export default function PersonalAccount({ students }) {
                     ))}
                 </Box>
             </Flex>
+            
+            <Footer />
         </>
     );
 }

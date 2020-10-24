@@ -6,10 +6,11 @@ import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 export default function EventPage() {
   return (
     <>
+    <Box m="0 auto" maxW={1550}>
       <HeaderTop  />
       
       
-      <Grid   alignItems="flex-start" maxW={1550}>
+      <Grid   alignItems="flex-start" >
 
       <Flex>
         <Heading fontSize={36} ml={390} mb="20px">Мероприятия</Heading>
@@ -18,7 +19,7 @@ export default function EventPage() {
       <Flex>
         <SumLeftMenu />
 
-        <SimpleGrid ml={33} columns={4} spacingX={30} spacingY={35}>
+        <SimpleGrid ml={33} columns={[3, 4]} spacingX={30} spacingY={35}>
           <Event />
           <Event />
           <Event />
@@ -35,6 +36,8 @@ export default function EventPage() {
       </Flex>
         
       </Grid>
+    </Box>
+      
     </>
   );
 }

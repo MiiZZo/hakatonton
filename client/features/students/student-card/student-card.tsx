@@ -1,13 +1,17 @@
 import { Button, Link, Box, Flex, Select, Image, Stack, Tag, TagLabel, TagCloseButton } from "@chakra-ui/core";
 
+interface Props {
+    firstName: string;
+    lastName: string;
+}
 
-export function NewCardsAccount() {
+export function StudentCard({ firstName, lastName }: Props) {
     return (
         <Flex w="1100px" justifyContent="space-between" alignItems="center" background="linear-gradient(135deg, #FFFFFF 0%, #FDFDFD 100%)" border="1px solid #CBD5E0" padding="10px" mb="15px">
             <Flex alignItems="center">
                 <Box><Image src="/accout.svg" h="50px" w="50px"></Image></Box>
                 <Box ml={5}>
-                    <Box fontSize="18px" fontWeight="550">Маслёнок Алексей</Box>
+                <Box fontSize="18px" fontWeight="550">{firstName} {lastName}</Box>
                     <Flex alignItems="center">
                         <Tag color="#EB5757" border="1px solid #EB5757" background="inherit">IT</Tag>
                         <Tag ml={2} fontSize="12px" color="#F2994A" border="1px solid #F2994A" background="inherit">SQL</Tag>

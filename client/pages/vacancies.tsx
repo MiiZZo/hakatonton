@@ -19,13 +19,12 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
     router.push({ query: { page: pageNumber }  });
   }
 
+
   return (
     <>
       <HeaderTop />
-      <Flex maxW={1670} margin="0 auto">
-        <Box w="1110px">
-          <Flex maxW={1550} m="0 auto" justifyContent="space-between" alignItems="flex-start">
-            <SumLeftMenu />
+      <Flex maxW={1670} margin="0 auto" padding="0 20px">
+        <SumLeftMenu />
             <Box w="1110px" ml="50px">
               <Flex mt="-60px" mb="21px" justifyContent="space-between">
                 <Flex>
@@ -68,8 +67,6 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
               ))}
               <Pagination current={pageNumber} total={pageCount} onChange={handleChangePage}/>
             </Box>
-          </Flex>
-        </Box>
       </Flex>
     </>
   );

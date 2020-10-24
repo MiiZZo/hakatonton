@@ -14,13 +14,12 @@ interface Props {
 export function NewCards(props: Props) {
   return (
     <Box
-      w="1110px"
+      w="1100px"
       overflow="hidden"
       position="relative"
       borderRadius={15}
       background="linear-gradient(135deg, #FFFFFF 0%, #FDFDFD 100%)"
       border="1px solid #E2E8F0"
-      display="inline-block"
       padding="30px 50px"
       m="0px 0 10px 0"
     >

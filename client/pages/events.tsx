@@ -6,9 +6,9 @@ import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 export default function EventPage() {
   return (
     <>
-      <Box m="0 auto" maxW={1670}>
+      <Box m="0 auto" maxW={1670} padding="0px 20px">
         <HeaderTop />
-        <Flex justifyContent="space-between">
+        <Flex justifyContent="space-between" alignItems="flex-start">
           <SumLeftMenu />
 
           <Box mt="-65px">

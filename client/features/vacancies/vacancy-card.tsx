@@ -11,7 +11,7 @@ export function NewCards() {
       border="1px solid #E2E8F0"
       display="inline-block"
       padding="30px 50px"
-      m="30px 0 10px 0"
+      m="0px 0 10px 0"
     >
       <Flex justifyContent="space-between" fontSize={20} mb="10px">
         <Heading as="h3" fontSize="20px">

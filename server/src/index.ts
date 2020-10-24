@@ -8,6 +8,7 @@ import { createConnection } from "typeorm";
 import { router as authRouter } from "./auth/auth.controller";
 import { router as vacanciesRouter } from "./vacancies/vacancy.controller";
 import { router as resumesRouter } from "./resumes/resume.controller";
+import { router as studentsRouter } from "./job-seeker/job-seeker.controller";
 
 const bootstrap = async () => {
     const app = express();
@@ -47,6 +48,7 @@ const bootstrap = async () => {
     app.use("/auth", authRouter);
     app.use("/vacancies", vacanciesRouter);
     app.use("/resumes", resumesRouter);
+    app.use("/students", studentsRouter);
 
     app.listen(5000, () => {
         console.log(`SERVER STARTED http://localhost:5000`);

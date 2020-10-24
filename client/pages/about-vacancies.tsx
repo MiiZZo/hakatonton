@@ -1,12 +1,7 @@
 import { HeaderTop } from "../features/header";
 import { NewCards } from "../features/vacancies/vacancy-card";
 
-import {
-  Button,
-  Box,
-  Flex,
-  Heading
-} from "@chakra-ui/core";
+import { Button, Box, Flex, Heading } from "@chakra-ui/core";
 
 export default function AboutVacancies() {
   return (

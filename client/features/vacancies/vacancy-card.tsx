@@ -1,9 +1,4 @@
-import {
-  Button,
-  Box,
-  Flex,
-  Heading
-} from "@chakra-ui/core";
+import { Button, Box, Flex, Heading } from "@chakra-ui/core";
 
 export function NewCards() {
   return (

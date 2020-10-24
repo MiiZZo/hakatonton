@@ -5,9 +5,8 @@ import {
   FormControl,
   Radio,
   RadioGroup,
-  FormLabel,
+  FormLabel
 } from "@chakra-ui/core";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { API_URL } from "../../constants";
@@ -126,7 +125,7 @@ export function RegistrationStudent() {
             _hover={{ bg: "#2A69AC" }}
             _focus={{ bg: "#2A69AC" }}
             _active={{ bg: "inherit" }}
-          ></Input>
+          />
         </Box>
       </form>
     </>

@@ -31,8 +31,6 @@ router.post("/signup/employer", async (req, res) => {
     const employerService = new EmployerService();
     const result = await employerService.createEmployer(req.body);
 
-    console.log(result);
-
     if (result.errors.length > 0) {
         res.status(400);
         res.json(result);
@@ -67,7 +65,7 @@ router.post("/signin", async (req, res) => {
             res.json({
                 data: null,
                 errors: [{
-                    message: "Пользователь с такими данными не зарегистрирован"
+                    message: "Неверный логин или пароль"
                 }]
             });
 
@@ -86,7 +84,7 @@ router.post("/signin", async (req, res) => {
         res.json({
             data: null,
             errors: [{
-                message: "Пользователь с такими данными не зарегистрирован"
+                message: "Неверный логин или пароль"
             }]
         });
 

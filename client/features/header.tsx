@@ -1,9 +1,4 @@
-import {
-  Box,
-  Flex,
-  Image,
-  Link
-} from "@chakra-ui/core";
+import { Box, Flex, Image, Link } from "@chakra-ui/core";
 
 export function HeaderTop() {
   return (

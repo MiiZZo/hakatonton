@@ -2,13 +2,7 @@ import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 import { NewCards } from "../features/vacancies/vacancy-card";
 import { HeaderTop } from "../features/header";
 
-import {
-  Button,
-  Box,
-  Input,
-  Flex,
-  Select
-} from "@chakra-ui/core";
+import { Button, Box, Input, Flex, Select, IconButton } from "@chakra-ui/core";
 
 export default function newSummary() {
   return (
@@ -24,7 +18,9 @@ export default function newSummary() {
                 w={510}
                 padding="0 80px 0 10px"
               ></Input>
-              <Button
+              <IconButton
+                aria-label="search-button"
+                icon="search"
                 zIndex={50}
                 _focus={{ outline: "none" }}
                 padding="0 5px"
@@ -40,7 +36,7 @@ export default function newSummary() {
                 h="38px"
               >
                 Addons
-              </Button>
+              </IconButton>
               <Flex mt="30px">
                 <Select placeholder="Сортировать по" w="170px" fontSize={14}>
                   <option value="option1">Сортировать по</option>

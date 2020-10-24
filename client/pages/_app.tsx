@@ -1,10 +1,29 @@
 import { CSSReset, ThemeProvider } from "@chakra-ui/core";
+import { useState } from "react";
+import { User, UserContext } from "../store/user";
 
 function MyApp({ Component, pageProps }) {
+  const [user, setUser] = useState<User["user"]>({
+    auth: false,
+    role: "ghost",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: ""
+  });
+
+  const handleSetUser = (userData: Partial<User["user"]>) => {
+    setUser({ ...user, ...userData });
+  }
+
   return (
     <ThemeProvider>
       <CSSReset />
-      <Component {...pageProps} />
+      <UserContext.Provider
+        value={{ user, handleSetUser }}
+      >
+        <Component {...pageProps} />
+      </UserContext.Provider>
     </ThemeProvider>
   );
 }

@@ -1,7 +1,7 @@
-import { Event } from "../../features/event/event";
-import { HeaderTop } from "../../features/header";
+import { Event } from "../features/event/event";
+import { HeaderTop } from "../features/header";
 import { Flex, Box, Heading, SimpleGrid } from "@chakra-ui/core";
-import { SumLeftMenu } from "../../features/vacancies/vacancy-left-menu";
+import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 
 export default function EventPage() {
   return (

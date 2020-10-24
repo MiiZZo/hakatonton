@@ -48,54 +48,6 @@ export function HeaderTop() {
             Резюме
           </Link>
         </NavLink>
-        <Link href="/vacancies" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
-          <Box
-            className="GreenHover"
-            opacity="0"
-            zIndex={-1}
-            position="absolute"
-            left="-110px"
-            top="-210px"
-            background="#27AE60"
-            boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
-            borderRadius={30}
-            h={250}
-            w={250}
-          ></Box>
-          Главная
-        </Link>
-        <Link href="/events" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
-          <Box
-             className="GreenHover"
-            zIndex={-1}
-            opacity="0"
-            position="absolute"
-            left="-80px"
-            top="-210px"
-            background="#27AE60"
-            boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
-            borderRadius={30}
-            h={250}
-            w={250}
-          ></Box>
-          Мероприятия
-        </Link>
-        <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
-          <Box
-          className="GreenHover"
-            zIndex={-1}
-            position="absolute"
-            left="-100px"
-            opacity="0"
-            top="-210px"
-            background="#27AE60"
-            boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
-            borderRadius={30}
-            h={250}
-            w={250}
-          ></Box>
-          Контакты
-        </Link>
       </Flex>
       <NavLink href="/personal-account">
         <Image src="/Ellipse 1.svg" cursor="pointer" h="40px" w="40px" mr="50px"></Image>

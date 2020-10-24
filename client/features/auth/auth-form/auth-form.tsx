@@ -1,8 +1,5 @@
 import {
-  Button,
   Box,
-  Input,
-  Checkbox,
   Flex,
   Tabs,
   TabList,
@@ -31,8 +28,8 @@ export function AuthForm() {
   };
 
   return (
-    <Flex justifyContent="center" alignItems="center" minH="100vh" backgroundImage="url(/fon-bg.jpg)" backgroundRepeat="no-repeat" backgroundSize="cover" position="relative">
-      <Box background="rgba(0, 0, 0, 0.5)" minH="100vh" position="absolute" left="0" top="0" w="100%" zIndex={0}></Box>
+    <Flex justifyContent="center" alignItems="center" minH="100vh" backgroundImage="url(/fon-bg-2.jpg)" backgroundRepeat="no-repeat" backgroundSize="cover" position="relative" backgroundPosition="top left">
+      <Box background="rgba(0, 0, 0, 0.3)" h="100%" position="absolute" left="0" top="0" w="100%" zIndex={0}></Box>
       <Box
         backgroundColor="#FFFFFF;"
         boxShadow="0px 35px 80px rgba(0, 0, 0, 0.05), 0px 14.6222px 38.8187px rgba(0, 0, 0, 0.0359427), 0px 7.81771px 25.3357px rgba(0, 0, 0, 0.0298054), 0px 4.38254px 17.5049px rgba(0, 0, 0, 0.025), 0px 2.32754px 11.4114px rgba(0, 0, 0, 0.0201946), 0px 0.96854px 5.75589px rgba(0, 0, 0, 0.0140573);"
@@ -42,7 +39,6 @@ export function AuthForm() {
         pb={10}
         margin="30px 0"
         zIndex={50}>
-      >
         <Tabs zIndex={50}>
           <TabList display="flex" justifyContent="center" pt={50} border="none">
             <Tab _focus={{ borderColor: "inherit" }} _active={{ borderColor: "inherit" }} fontSize={18}>

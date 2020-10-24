@@ -1,12 +1,18 @@
 import { Box, Input, Flex, Heading, IconButton } from "@chakra-ui/core";
 
-export function SumLeftMenu() {
+interface Props {
+  handleSearch: (e: any) => void;
+  handleSubmitSearch: () => void;
+}
+
+export function SumLeftMenu({ handleSearch, handleSubmitSearch }: Props) {
   return (
     <>
       <Box w="350px" borderRadius={15} border="1px solid #E2E8F0" padding="0" pb="20px" mb={10}>
         <Box position="relative" display="inline-block" left="-5px" top="-62px">
-          <Input placeholder="Text Here" w={360} padding="0 80px 0 10px"></Input>
+          <Input onChange={handleSearch} placeholder="Text Here" w={360} padding="0 80px 0 10px"></Input>
           <IconButton
+            onClick={handleSubmitSearch}
             aria-label="search-button"
             icon="search"
             zIndex={50}
@@ -22,9 +28,7 @@ export function SumLeftMenu() {
             fontSize={14}
             background="#EDF2F7"
             h="38px"
-          >
-            Addons
-          </IconButton>
+          />
         </Box>
         <Box>
           <Heading as="h5" fontSize="14px" pl="35px" mb="10px">

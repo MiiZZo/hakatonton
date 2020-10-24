@@ -1,0 +1,9 @@
+{
+    "COOKIE_NAME": "qid",
+    "SESSION_SECRET": "secret",
+    "ORIGIN": "http://localhost:3000",
+    "REDIS_HOST": "83.166.241.137",
+    "REDIS_PASS": "11197811aS@",
+    "VK_TOKEN": "7b3626cb7b3626cb7b3626cb1b7b42aadb77b367b3626cb24a7d134520975e262dbc795",
+    "__prod__": false
+}

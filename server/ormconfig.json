@@ -1,0 +1,10 @@
+{
+    "type": "mysql",
+    "host": "83.166.241.137",
+    "port": 3306,
+    "username": "root",
+    "password": "11197811aS@",
+    "database": "truehakaton",
+    "entities": ["dist/**/*.entity{.ts,.js}", "./src/**/*.ts"],
+    "synchronize": true
+}

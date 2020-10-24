@@ -9,7 +9,7 @@ export default function newSummary() {
     <>
       <HeaderTop />
 
-      <Box maxW={1550} m="0 auto" padding="0px 0 20px 0">
+      <Box maxW={1670} m="0 auto" padding="0px 20px 20px 20px">
         <Box w="1110px" ml="auto">
           <Flex justifyContent="space-between">
             <Flex >

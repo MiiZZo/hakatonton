@@ -20,7 +20,7 @@ export function Event() {
           </Text>
         </Flex>
         <Text m="10px 24px" maxW={252}>
-          Lorem ipsum carrots, enhanced undergraduate developer, but they do
+          Lorem ipsum carrots, enhanced undergraduate developer, but they d
           occaecat time.
         </Text>
         <Flex maxW="252px" m="0 24px 18px" >

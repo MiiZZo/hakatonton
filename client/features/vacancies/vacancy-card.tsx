@@ -34,8 +34,12 @@ export function NewCards(props: Props) {
       ></Box>
       <Flex justifyContent="space-between" fontSize={20} mb="10px">
         <Box>
-          <Heading as="h3" fontSize="20px">{props.title}</Heading>
-          <Heading as="h3" fontSize="20px" mt="5px" color="#27AE60">{props.price}</Heading>
+          <Heading as="h3" fontSize="20px">
+            {props.title}
+          </Heading>
+          <Heading as="h3" fontSize="20px" mt="5px" color="#27AE60">
+            {props.price}
+          </Heading>
         </Box>
         <Box fontSize={20} color="#fff" textAlign="center" padding-bottom="2px">
           <Box zIndex={2} position="absolute" right={5} top={3}>
@@ -43,9 +47,15 @@ export function NewCards(props: Props) {
           </Box>
         </Box>
       </Flex>
-      <Box fontSize="14px" mb="10px">{props.name}</Box>
-      <Box fontSize="14px" mb="10px">{props.city}</Box>
-      <Box fontSize="16px" mb="10px">{props.text}</Box>
+      <Box fontSize="14px" mb="10px">
+        {props.name}
+      </Box>
+      <Box fontSize="14px" mb="10px">
+        {props.city}
+      </Box>
+      <Box fontSize="16px" mb="10px">
+        {props.text}
+      </Box>
       <Flex justifyContent="space-between" alignItems="center">
         <Box>
           <Box

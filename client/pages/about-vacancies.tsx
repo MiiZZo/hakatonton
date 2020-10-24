@@ -20,31 +20,13 @@ export default function AboutVacancies() {
           Название вакансии
         </Heading>
         <Flex mt={3}>
-          <Box
-            padding="0 7px"
-            color="#2D9CDB"
-            border="1px solid #2D9CDB"
-            mr={4}
-            fontSize="12px"
-          >
+          <Box padding="0 7px" color="#2D9CDB" border="1px solid #2D9CDB" mr={4} fontSize="12px">
             IT
           </Box>
-          <Box
-            padding="0 7px"
-            color="#F2994A"
-            border="1px solid #F2994A"
-            mr={4}
-            fontSize="12px"
-          >
+          <Box padding="0 7px" color="#F2994A" border="1px solid #F2994A" mr={4} fontSize="12px">
             Анализ
           </Box>
-          <Box
-            padding="0 7px"
-            color="#EB5757"
-            border="1px solid #EB5757"
-            mr={4}
-            fontSize="12px"
-          >
+          <Box padding="0 7px" color="#EB5757" border="1px solid #EB5757" mr={4} fontSize="12px">
             С++
           </Box>
         </Flex>
@@ -63,11 +45,9 @@ export default function AboutVacancies() {
           </Box>
         </Flex>
         <Box fontSize={18} maxW={950} m="20px 0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-          purus sit amet luctus venenatis, lectus magna fringilla urna,
-          porttitor rhoncus dolor purus non enim praesent elementum facilisis
-          leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim
-          diam quis
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus
+          magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla
+          est ullamcorper eget nulla facilisi etiam dignissim diam quis
         </Box>
         <Box fontSize={24} mt={10} fontWeight="550">
           Обязанности
@@ -95,12 +75,38 @@ export default function AboutVacancies() {
         </Box>
         <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
         <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-        <Box fontSize={18} mb={10}>– это, другое, третье, пятое, десятьое.</Box>
+        <Box fontSize={18} mb={10}>
+          – это, другое, третье, пятое, десятьое.
+        </Box>
 
-        <NewCards title="Верстальщик" price="от 60000 руб." name="Петров Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"/>
-        <NewCards title="Оператор склада / Кладовщик - Комплектовщик" price="от 43000 руб." name="Маскаль Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis" />
-        <NewCards title="Водитель-курьер на автомобиле" price="от 32000 руб." name="Петрович Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis" />
-        <NewCards title="Куколд" price="от 24000 руб." name="Властилен Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis" />
+        <NewCards
+          title="Верстальщик"
+          price="от 60000 руб."
+          name="Петров Иван Иванович"
+          city="г. Боровичи"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
+        />
+        <NewCards
+          title="Оператор склада / Кладовщик - Комплектовщик"
+          price="от 43000 руб."
+          name="Маскаль Иван Иванович"
+          city="г. Боровичи"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
+        />
+        <NewCards
+          title="Водитель-курьер на автомобиле"
+          price="от 32000 руб."
+          name="Петрович Иван Иванович"
+          city="г. Боровичи"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
+        />
+        <NewCards
+          title="Куколд"
+          price="от 24000 руб."
+          name="Властилен Иван Иванович"
+          city="г. Боровичи"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
+        />
       </Box>
     </>
   );

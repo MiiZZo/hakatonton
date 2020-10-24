@@ -76,13 +76,7 @@ export function RegistrationOrganizations() {
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
             E-mail
           </FormLabel>
-          <Input
-            name="email"
-            ref={register({ required: true })}
-            placeholder="Text"
-            w="80%"
-            m="0 auto"
-          />
+          <Input name="email" ref={register({ required: true })} placeholder="Text" w="80%" m="0 auto" />
         </FormControl>
         <FormControl isRequired>
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
@@ -101,34 +95,16 @@ export function RegistrationOrganizations() {
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
             Телефон
           </FormLabel>
-          <Input
-            placeholder="Text"
-            w="80%"
-            m="0 auto"
-            name="phoneNumber"
-            ref={register({ required: true })}
-          />
+          <Input placeholder="Text" w="80%" m="0 auto" name="phoneNumber" ref={register({ required: true })} />
         </FormControl>
         <FormControl isRequired>
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
             Компания
           </FormLabel>
-          <Input
-            placeholder="Text"
-            name="companyName"
-            ref={register({ required: true })}
-            w="80%"
-            m="0 auto"
-          ></Input>
+          <Input placeholder="Text" name="companyName" ref={register({ required: true })} w="80%" m="0 auto"></Input>
         </FormControl>
         <Box ml="52px" mt="20px">
-          <Checkbox
-            border="2px solid #77777"
-            color="#777777"
-            fontSize={16}
-            outline="none"
-            fontWeight={500}
-          >
+          <Checkbox border="2px solid #77777" color="#777777" fontSize={16} outline="none" fontWeight={500}>
             Пользовательское соглашения
           </Checkbox>
         </Box>

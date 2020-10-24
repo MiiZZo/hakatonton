@@ -19,17 +19,17 @@ export function LoginForm({ handleLogin }: Props) {
         headers: {
           "Content-Type": "application/json"
         },
-        credentials: 'include'
+        credentials: "include"
       });
 
       if (res.status === 200) {
         const json = await res.json();
         handleLogin(json.data);
       }
-    }
+    };
 
     login();
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -61,13 +61,7 @@ export function LoginForm({ handleLogin }: Props) {
         </Button>
       </Box>
       <Box ml="52px" mt="20px">
-        <Checkbox
-          border="2px solid #77777"
-          color="#777777"
-          fontSize={16}
-          outline="none"
-          fontWeight={500}
-        >
+        <Checkbox border="2px solid #77777" color="#777777" fontSize={16} outline="none" fontWeight={500}>
           Запомните пароль
         </Checkbox>
       </Box>

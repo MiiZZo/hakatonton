@@ -21,7 +21,7 @@ export const UserContext = createContext<User>({
     lastName: "",
     email: "",
     phoneNumber: "",
-    resumes: null,
+    resumes: null
   },
   handleSetUser: () => {}
 });

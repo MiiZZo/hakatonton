@@ -15,14 +15,12 @@ function MyApp({ Component, pageProps }) {
 
   const handleSetUser = (userData: Partial<User["user"]>) => {
     setUser({ ...user, ...userData });
-  }
+  };
 
   return (
     <ThemeProvider>
       <CSSReset />
-      <UserContext.Provider
-        value={{ user, handleSetUser }}
-      >
+      <UserContext.Provider value={{ user, handleSetUser }}>
         <Component {...pageProps} />
       </UserContext.Provider>
     </ThemeProvider>

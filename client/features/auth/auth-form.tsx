@@ -31,12 +31,7 @@ export function AuthForm() {
   };
 
   return (
-    <Flex
-      justifyContent="center"
-      alignItems="center"
-      minH="100vh"
-      backgroundColor="#ccc"
-    >
+    <Flex justifyContent="center" alignItems="center" minH="100vh" backgroundColor="#ccc">
       <Box
         backgroundColor="#FFFFFF;"
         boxShadow="0px 35px 80px rgba(0, 0, 0, 0.05), 0px 14.6222px 38.8187px rgba(0, 0, 0, 0.0359427), 0px 7.81771px 25.3357px rgba(0, 0, 0, 0.0298054), 0px 4.38254px 17.5049px rgba(0, 0, 0, 0.025), 0px 2.32754px 11.4114px rgba(0, 0, 0, 0.0201946), 0px 0.96854px 5.75589px rgba(0, 0, 0, 0.0140573);"
@@ -48,18 +43,10 @@ export function AuthForm() {
       >
         <Tabs>
           <TabList display="flex" justifyContent="center" pt={50} border="none">
-            <Tab
-              _focus={{ borderColor: "inherit" }}
-              _active={{ borderColor: "inherit" }}
-              fontSize={18}
-            >
+            <Tab _focus={{ borderColor: "inherit" }} _active={{ borderColor: "inherit" }} fontSize={18}>
               Авторизация
             </Tab>
-            <Tab
-              _focus={{ borderColor: "inherit" }}
-              _active={{ borderColor: "inherit" }}
-              fontSize={18}
-            >
+            <Tab _focus={{ borderColor: "inherit" }} _active={{ borderColor: "inherit" }} fontSize={18}>
               Регистрация
             </Tab>
           </TabList>
@@ -68,11 +55,7 @@ export function AuthForm() {
               <LoginForm handleLogin={handleLogin} />
             </TabPanel>
             <TabPanel>
-              <RadioGroup
-                defaultValue="student"
-                mt={5}
-                onChange={handleChangeForm}
-              >
+              <RadioGroup defaultValue="student" mt={5} onChange={handleChangeForm}>
                 <Radio value="student" ml={60}>
                   Студент
                 </Radio>
@@ -80,9 +63,7 @@ export function AuthForm() {
                   Работодатель
                 </Radio>
               </RadioGroup>
-              {(formType === "student" && <RegistrationStudent />) || (
-                <RegistrationOrganizations />
-              )}
+              {(formType === "student" && <RegistrationStudent />) || <RegistrationOrganizations />}
             </TabPanel>
           </TabPanels>
         </Tabs>

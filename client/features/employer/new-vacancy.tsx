@@ -32,30 +32,15 @@ export function NewVacancy() {
         </Text>
         <FormControl isRequired>
           <Flex mb="30px">
-            <FormLabel
-              w={300}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={300} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Название вакансии
             </FormLabel>
-            <Input
-              rounded="4px"
-              placeholder="Text Here"
-              w="70%"
-              m="auto"
-            ></Input>
+            <Input rounded="4px" placeholder="Text Here" w="70%" m="auto"></Input>
           </Flex>
         </FormControl>
         <FormControl isRequired>
           <Flex mb="30px">
-            <FormLabel
-              w={300}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={300} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Специализация
             </FormLabel>
             <Text m="1" borderBottom="2px solid">
@@ -65,12 +50,7 @@ export function NewVacancy() {
         </FormControl>
         <FormControl isRequired>
           <Flex mb="30px">
-            <FormLabel
-              w={300}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={300} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Обязанности
             </FormLabel>
             <Input rounded="4px" placeholder="Text Here" w="70%" m="auto" />
@@ -78,41 +58,30 @@ export function NewVacancy() {
         </FormControl>
         <FormControl isRequired>
           <Flex mb="30px">
-            <FormLabel
-              w={300}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={300} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Ключевые навыки
             </FormLabel>
             <Input rounded="4px" placeholder="Text Here" w="70%" m="auto" />
           </Flex>
         </FormControl>
         <Flex mb="30px">
-          <FormLabel
-            w={360}
-            m="20px 50px 10px 0"
-            color="#000000"
-            fontWeight="550"
-          >
-            Дата рождения
+          <FormLabel w={360} m="20px 50px 10px 0" color="#000000" fontWeight="550">
+            Заработная плата
           </FormLabel>
-
           <FormControl>
-            <Input placeholder="От" rounded="4px 0px 0px 4px" w={"50%"}></Input>
+            <Input placeholder="От" name="salaryFrom" rounded="4px 0px 0px 4px" w={"50%"}></Input>
           </FormControl>
           <FormControl>
-            <Input placeholder="До" w={"50%"}></Input>
+            <Input placeholder="До" name="salaryUpTo" w={"50%"}></Input>
           </FormControl>
-          <FormControl>
+          {/* <FormControl>
             <Select w={"50%"}>
               <option selected value="option1">
                 Руб
               </option>
               <option value="option2">USD</option>
             </Select>
-          </FormControl>
+          </FormControl> */}
         </Flex>
         <Box>
           <FormControl>
@@ -133,20 +102,10 @@ export function NewVacancy() {
         </Heading>
         <FormControl isRequired>
           <Flex mb="30px">
-            <FormLabel
-              w={300}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={300} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Вакансия в городе
             </FormLabel>
-            <Input
-              rounded="4px"
-              placeholder="Text Here"
-              w="70%"
-              m="auto"
-            ></Input>
+            <Input rounded="4px" placeholder="Text Here" w="70%" m="auto"></Input>
           </Flex>
         </FormControl>
       </Box>
@@ -156,12 +115,7 @@ export function NewVacancy() {
         </Heading>
         <FormControl isRequired>
           <Flex>
-            <FormLabel
-              w={240}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={240} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Тип занятости
             </FormLabel>
             <Checkbox>Возможно временное оформление</Checkbox>
@@ -232,12 +186,7 @@ export function NewVacancy() {
         </FormControl>
         <Box>
           <Flex mb="30px">
-            <FormLabel
-              w={240}
-              m="20px 50px 10px 00"
-              color="#000000"
-              fontWeight="550"
-            >
+            <FormLabel w={240} m="20px 50px 10px 00" color="#000000" fontWeight="550">
               Знание языков
             </FormLabel>
             <FormControl mr="5px">

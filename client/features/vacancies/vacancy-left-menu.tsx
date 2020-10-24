@@ -1,29 +1,11 @@
-import {
-  Box,
-  Input,
-  Flex,
-  Heading,
-  IconButton
-} from "@chakra-ui/core";
+import { Box, Input, Flex, Heading, IconButton } from "@chakra-ui/core";
 
 export function SumLeftMenu() {
   return (
     <>
-
-      <Box
-        w="350px"
-        borderRadius={15}
-        border="1px solid #E2E8F0"
-        padding="0"
-        pb="20px"
-        mb={10}
-      >
+      <Box w="350px" borderRadius={15} border="1px solid #E2E8F0" padding="0" pb="20px" mb={10}>
         <Box position="relative" display="inline-block" left="-5px" top="-62px">
-          <Input
-            placeholder="Text Here"
-            w={360}
-            padding="0 80px 0 10px"
-          ></Input>
+          <Input placeholder="Text Here" w={360} padding="0 80px 0 10px"></Input>
           <IconButton
             aria-label="search-button"
             icon="search"
@@ -42,12 +24,12 @@ export function SumLeftMenu() {
             h="38px"
           >
             Addons
-    </IconButton>
+          </IconButton>
         </Box>
         <Box>
           <Heading as="h5" fontSize="14px" pl="35px" mb="10px">
             Регион
-        </Heading>
+          </Heading>
           <Box pl="50px" pr="20px" mb="50px" color="#000000" fontSize="16px">
             <Flex justifyContent="space-between" mb="10px">
               <Box>Россия</Box>
@@ -63,13 +45,13 @@ export function SumLeftMenu() {
             </Flex>
             <Box opacity="0.5" fontSize="12px">
               Ещё 158
-          </Box>
+            </Box>
           </Box>
         </Box>
         <Box mt="-30px">
           <Heading as="h5" fontSize="14px" pl="35px" pt="20px" mb="10px">
             Уровень дохода
-        </Heading>
+          </Heading>
           <Box pl="50px" pr="20px" mb="50px" color="#000000" fontSize="16px">
             <Flex justifyContent="space-between" mb="10px">
               <Box>Указать</Box>
@@ -96,7 +78,7 @@ export function SumLeftMenu() {
         <Box mt="-30px">
           <Heading as="h5" fontSize="14px" pl="35px" pt="20px" mb="10px">
             Профобласть
-        </Heading>
+          </Heading>
           <Box pl="50px" pr="20px" mb="50px" color="#000000" fontSize="16px">
             <Flex justifyContent="space-between" mb="10px">
               <Box>IT</Box>
@@ -112,24 +94,24 @@ export function SumLeftMenu() {
             </Flex>
             <Box opacity="0.5" fontSize="12px">
               Ещё 158
-          </Box>
+            </Box>
           </Box>
         </Box>
         <Heading as="h5" fontSize="14px" pl="35px" pt="0px" mb="10px">
           Отрасль компании
-      </Heading>
+        </Heading>
         <Heading as="h5" fontSize="14px" pl="35px" pt="20px" mb="10px">
           Опыт работы
-      </Heading>
+        </Heading>
         <Heading as="h5" fontSize="14px" pl="35px" pt="20px" mb="10px">
           Тип занятости
-      </Heading>
+        </Heading>
         <Heading as="h5" fontSize="14px" pl="35px" pt="20px" mb="10px">
           Исключение
-      </Heading>
+        </Heading>
         <Heading as="h5" fontSize="14px" pl="35px" pt="20px">
           Другие параметры
-      </Heading>
+        </Heading>
       </Box>
     </>
   );

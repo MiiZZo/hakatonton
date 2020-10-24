@@ -5,6 +5,7 @@ import { Button, Box,Flex, Select } from "@chakra-ui/core";
 import { API_URL } from "../constants";
 import { Pagination } from "../features/general/pagination";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 interface Props {
   vacancies: any[];
@@ -13,19 +14,29 @@ interface Props {
 }
 
 export default function newSummary({ pageCount, pageNumber, vacancies }: Props) {
+  const [search, setSearch] = useState("");
   const router = useRouter();
   
   const handleChangePage = (pageNumber: number) => {
     router.push({ query: { page: pageNumber }  });
   }
 
+<<<<<<< HEAD
+=======
+  const handleSearch = (e: any) => {
+    setSearch(e.target.value);
+  }
+
+  const handleSubmitSearch = () => {
+    router.push({ query: { search } })
+  }
+>>>>>>> 8ff862516bcd34cae70979e328c16d5d0d3e8fe5
+
   return (
     <>
       <HeaderTop />
-      <Flex maxW={1670} margin="0 auto">
-        <Box w="1110px">
-          <Flex maxW={1550} m="0 auto" justifyContent="space-between" alignItems="flex-start">
-            <SumLeftMenu />
+      <Flex maxW={1670} margin="0 auto" padding="0 20px">
+        <SumLeftMenu />
             <Box w="1110px" ml="50px">
               <Flex mt="-60px" mb="21px" justifyContent="space-between">
                 <Flex>
@@ -68,21 +79,24 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
               ))}
               <Pagination current={pageNumber} total={pageCount} onChange={handleChangePage}/>
             </Box>
-          </Flex>
-        </Box>
       </Flex>
     </>
   );
 }
 
-export const getServerSideProps =  async ({ query: { page }, req }) => {
-    const response = await fetch(
-      `${API_URL}/vacancies/?page=${page || 1}`
-    );
+export const getServerSideProps =  async ({ query: { page, search }, req }) => {
+  if (!search) {
+    search = ""
+  }
 
-    const data = await response.json();
 
-    return {
-      props: data
-    }
+  const response = await fetch(
+    `${API_URL}/vacancies/?page=${page || 1}&search=${encodeURIComponent(search)}`
+  );
+
+  const data = await response.json();
+
+  return {
+    props: data
+  }
 }

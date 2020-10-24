@@ -39,7 +39,7 @@ export default function newSummary() {
               </IconButton>
               <Flex mt="30px">
                 <Select placeholder="Сортировать по" w="170px" fontSize={14}>
-                  <option value="option1">Сортировать по</option>
+                  <option value="option1">Сортиров по</option>
                   <option value="option2">Сортировать по</option>
                   <option value="option3">Сортировать по</option>
                 </Select>

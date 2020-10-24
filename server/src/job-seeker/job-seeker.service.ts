@@ -55,4 +55,8 @@ export class JobSeekerService {
     async findOne({ password, ...criteria }: Partial<JobSeeker>): Promise<JobSeeker | undefined> {
         return (await this.repository.find(criteria))[0];
     }
+
+    async getAll() {
+        return await this.repository.find();
+    }
 }

@@ -1,7 +1,8 @@
-import { NewCards } from "../features/vacancies/vacancy-card/vacancy-card";
-import { HeaderTop } from "../features/header/header";
+import { NewCards } from "../../features/vacancies/vacancy-card/vacancy-card";
+import { HeaderTop } from "../../features/header/header";
 import { Button, Box, Flex, Select, Image, Stack, Tag, TagLabel, TagCloseButton, Heading } from "@chakra-ui/core";
-import { Footer } from "../features/footer/footer"
+import { Footer } from "../../features/footer/footer";
+import { API_URL } from "../../constants";
 
 
 export default function AboutVacancies() {
@@ -96,4 +97,6 @@ export default function AboutVacancies() {
   );
 }
 
-
+export const getServerSideProps = async ({ params: { id } }) => {
+    const res = await fetch(`${API_URL}/vacancies/${id}`);
+}

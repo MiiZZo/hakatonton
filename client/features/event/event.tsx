@@ -24,13 +24,13 @@ export function Event() {
           occaecat time.
         </Text>
         <Flex maxW="252px" m="0 24px 18px" >
-          <Tag  mr="5px">IT</Tag>
-          <Tag   mr="5px">SQL</Tag>
-          <Tag minW="none" paddingLeft="0.5rem" textAlign="center"  fontSize="14px">
+          <Tag size="sm" background="none" border="1px solid red" variantColor="red" mr="5px">IT</Tag>
+          <Tag size="sm" background="none" border="1px solid yellow" variantColor="yellow" mr="5px">SQL</Tag>
+          <Tag size="sm" background="none" variantColor="gray" fontSize="14px">
             +7
           </Tag>
           <Button
-            ml="32px"
+            ml="42px"
             h="30px"
             fontSize="13px"
             background="none"

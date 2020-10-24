@@ -95,10 +95,12 @@ export default function AboutVacancies() {
         </Box>
         <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
         <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-        <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
+        <Box fontSize={18} mb={10}>– это, другое, третье, пятое, десятьое.</Box>
 
-        <NewCards />
-        <NewCards />
+        <NewCards title="Верстальщик" price="от 60000 руб." name="Петров Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"/>
+        <NewCards title="Оператор склада / Кладовщик - Комплектовщик" price="от 43000 руб." name="Маскаль Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis" />
+        <NewCards title="Водитель-курьер на автомобиле" price="от 32000 руб." name="Петрович Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis" />
+        <NewCards title="Куколд" price="от 24000 руб." name="Властилен Иван Иванович" city="г. Боровичи" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis" />
       </Box>
     </>
   );

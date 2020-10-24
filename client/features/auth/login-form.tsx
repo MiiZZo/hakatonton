@@ -73,6 +73,7 @@ export function LoginForm({ handleLogin }: Props) {
       </Box>
       <Box>
         <Input
+          cursor="pointer"
           type="submit"
           ml="auto"
           display="block"

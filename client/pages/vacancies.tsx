@@ -5,6 +5,7 @@ import { Button, Box,Flex, Select } from "@chakra-ui/core";
 import { API_URL } from "../constants";
 import { Pagination } from "../features/general/pagination";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 interface Props {
   vacancies: any[];
@@ -13,12 +14,23 @@ interface Props {
 }
 
 export default function newSummary({ pageCount, pageNumber, vacancies }: Props) {
+  const [search, setSearch] = useState("");
   const router = useRouter();
   
   const handleChangePage = (pageNumber: number) => {
     router.push({ query: { page: pageNumber }  });
   }
 
+<<<<<<< HEAD
+=======
+  const handleSearch = (e: any) => {
+    setSearch(e.target.value);
+  }
+
+  const handleSubmitSearch = () => {
+    router.push({ query: { search } })
+  }
+>>>>>>> 8ff862516bcd34cae70979e328c16d5d0d3e8fe5
 
   return (
     <>
@@ -72,14 +84,19 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
   );
 }
 
-export const getServerSideProps =  async ({ query: { page }, req }) => {
-    const response = await fetch(
-      `${API_URL}/vacancies/?page=${page || 1}`
-    );
+export const getServerSideProps =  async ({ query: { page, search }, req }) => {
+  if (!search) {
+    search = ""
+  }
 
-    const data = await response.json();
 
-    return {
-      props: data
-    }
+  const response = await fetch(
+    `${API_URL}/vacancies/?page=${page || 1}&search=${encodeURIComponent(search)}`
+  );
+
+  const data = await response.json();
+
+  return {
+    props: data
+  }
 }

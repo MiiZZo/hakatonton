@@ -2,10 +2,13 @@ import { Button, Box, Flex, Heading, Image } from "@chakra-ui/core";
 
 interface Props {
   title: string;
-  price: string;
-  name: string;
-  city: string;
-  text: string;
+  salaryFrom: number;
+  salaryUpTo: number;
+  employment: string;
+  schedule: string;
+  responsibilities: string;
+  keySkills: string;
+  employer: any;
 }
 
 export function NewCards(props: Props) {
@@ -38,7 +41,7 @@ export function NewCards(props: Props) {
             {props.title}
           </Heading>
           <Heading as="h3" fontSize="20px" mt="5px" color="#27AE60">
-            {props.price}
+            от {props.salaryFrom} руб.
           </Heading>
         </Box>
         <Box fontSize={20} color="#fff" textAlign="center" padding-bottom="2px">
@@ -48,13 +51,13 @@ export function NewCards(props: Props) {
         </Box>
       </Flex>
       <Box fontSize="14px" mb="10px">
-        {props.name}
+        {props.employer.companyName}
       </Box>
       <Box fontSize="14px" mb="10px">
-        {props.city}
+        г. Москва
       </Box>
       <Box fontSize="16px" mb="10px">
-        {props.text}
+        {props.responsibilities}
       </Box>
       <Flex justifyContent="space-between" alignItems="center">
         <Box>

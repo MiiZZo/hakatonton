@@ -1,14 +1,27 @@
 import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 import { NewCards } from "../features/vacancies/vacancy-card";
 import { HeaderTop } from "../features/header";
+import { Button, Box,Flex, Select } from "@chakra-ui/core";
+import { API_URL } from "../constants";
+import { Pagination } from "../features/general/pagination";
+import { useRouter } from "next/router";
 
-import { Button, Box, Input, Flex, Select, IconButton } from "@chakra-ui/core";
+interface Props {
+  vacancies: any[];
+  pageNumber: number;
+  pageCount: number;
+}
 
-export default function newSummary() {
+export default function newSummary({ pageCount, pageNumber, vacancies }: Props) {
+  const router = useRouter();
+  
+  const handleChangePage = (pageNumber: number) => {
+    router.push({ query: { page: pageNumber }  });
+  }
+
   return (
     <>
       <HeaderTop />
-
       <Flex maxW={1670} margin="0 auto">
         <Box w="1110px">
           <Flex maxW={1550} m="0 auto" justifyContent="space-between" alignItems="flex-start">
@@ -47,39 +60,29 @@ export default function newSummary() {
                   Создать резюме
                 </Button>
               </Flex>
-
-              <NewCards
-                title="Верстальщиdк"
-                price="от 60000 руб."
-                name="Петров Иван Иванович"
-                city="г. Боровичи"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
-              />
-              <NewCards
-                title="Оператор склада / Кладовщик - Комплектовщик"
-                price="от 43000 руб."
-                name="Маскаль Иван Иванович"
-                city="г. Боровичи"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
-              />
-              <NewCards
-                title="Водитель-курьер на автомобиле"
-                price="от 32000 руб."
-                name="Петрович Иван Иванович"
-                city="г. Боровичи"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
-              />
-              <NewCards
-                title="Куколдdd"
-                price="от 24000 руб."
-                name="Властилен Иван Иванович"
-                city="г. Боровичи"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis"
-              />
+              {vacancies.map(vacancy => (
+                <NewCards 
+                  key={vacancy.id}
+                  {...vacancy}
+                />
+              ))}
+              <Pagination current={pageNumber} total={pageCount} onChange={handleChangePage}/>
             </Box>
           </Flex>
         </Box>
       </Flex>
     </>
   );
+}
+
+export const getServerSideProps =  async ({ query: { page }, req }) => {
+    const response = await fetch(
+      `${API_URL}/vacancies/?page=${page || 1}`
+    );
+
+    const data = await response.json();
+
+    return {
+      props: data
+    }
 }

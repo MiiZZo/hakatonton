@@ -16,6 +16,7 @@ export default function AboutVacancies() {
           border="1px solid #E2E8F0"
           borderRadius="45px"
           background="#FDFDFD"
+          boxShadow="0px 10px 20px rgba(0, 0, 0, 0.08), 0px 1.9026px 9.89203px rgba(0, 0, 0, 0.0132832)"
         >
           <Box>
             <Heading as="h3" fontSize={24}>

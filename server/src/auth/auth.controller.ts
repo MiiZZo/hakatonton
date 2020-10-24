@@ -22,6 +22,8 @@ router.post("/signup/jobseeker", async (req, res) => {
     
     res.status(201);
     (req.session as any).userId = result.data.id;
+    (req.session as any).userRole = "job-seeker";
+    
     
     res.json(result);
     return;
@@ -39,6 +41,7 @@ router.post("/signup/employer", async (req, res) => {
     
     res.status(201);
     (req.session as any).userId = result.data.id;
+    (req.session as any).userRole = "employer";
     
     res.json(result);
     return;
@@ -50,6 +53,7 @@ router.post("/signin", async (req, res) => {
     loginDto.password = req.body.password;
 
     let user: JobSeeker | Employer | null = null;
+    let userRole = "";
 
     const validationResult = await validate(loginDto);
 
@@ -72,9 +76,11 @@ router.post("/signin", async (req, res) => {
             return;
         } else {
             user = employer;
+            userRole = "employer"
         }
     } else {
         user = jobSeeker;
+        userRole = "job-seeker"
     }
 
     const passwordsMatched = bcrypt.compare(loginDto.password, user.password);
@@ -92,6 +98,7 @@ router.post("/signin", async (req, res) => {
     }
 
     (req.session as any).userId = user.id;
+    (req.session as any).userRole = userRole;
 
     res.json({
         data: user,

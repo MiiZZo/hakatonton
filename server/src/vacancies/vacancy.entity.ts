@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Employer } from "../employer/employer.entity";
 
 export const EmploymentEnum = [
     "Полная занятость",
@@ -24,8 +25,14 @@ export class Vacancy {
     @Column()
     title!: string;
 
+    // @Column()
+    // cityId!: number;
+
     @Column()
-    cityId!: number;
+    responsibilities!: string;
+
+    @Column()
+    keySkills!: string;
 
     @Column()
     salaryFrom!: number;
@@ -37,11 +44,14 @@ export class Vacancy {
         type: "enum",
         enum: EmploymentEnum,
     })
-    emloyment!: string;
+    employment!: string;
 
     @Column({
         type: "enum",
         enum: ScheduleEnum
     })
     schedule!: string;
+
+    @ManyToOne(() => Employer, employer => employer.vacancies)
+    employer!: Employer;
 }

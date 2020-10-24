@@ -4,16 +4,15 @@ import { Flex, Button, Grid, Box, Heading, SimpleGrid } from "@chakra-ui/core";
 import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
 
 export default function NewEventPage() {
-    return (
-        <>
-        
-        <Box m="0 auto"  maxW={1670} padding="0px 20px">
+  return (
+    <>
+      <Box m="0 auto" maxW={1670} padding="0px 20px">
         <HeaderTop />
         <Flex  alignItems="flex-start">
           <SumLeftMenu />
 
-          <Box mt="-65px">
-            <Flex >
+          <Box mt="-65px" w="100%">
+            <Flex alignItems="center">
               <Heading fontSize={36} mb="20px" ml="50px">
                 Мероприятия
               </Heading>
@@ -39,13 +38,11 @@ export default function NewEventPage() {
               </Button>
             </Flex>
             <Flex justifyContent="space-between" flexWrap="wrap" alignItems="flex-start" ml="50px">
-            <NewEvent />
+              <NewEvent />
             </Flex>
           </Box>
         </Flex>
       </Box>
-
-
-        </>
-    );
+    </>
+  );
 }

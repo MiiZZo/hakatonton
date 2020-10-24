@@ -19,7 +19,7 @@ export function HeaderTop() {
               zIndex={-1}
               opacity="0"
               position="absolute"
-              left="-80px"
+              left="-110px"
               top="-210px"
               background="#27AE60"
               boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
@@ -36,7 +36,7 @@ export function HeaderTop() {
             className="GreenHover"
               zIndex={-1}
               position="absolute"
-              left="-80px"
+              left="-100px"
               opacity="0"
               top="-210px"
               background="#27AE60"

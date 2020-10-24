@@ -18,7 +18,8 @@ export function LoginForm({ handleLogin }: Props) {
         body: JSON.stringify(values),
         headers: {
           "Content-Type": "application/json"
-        }
+        },
+        credentials: 'include'
       });
 
       if (res.status === 200) {

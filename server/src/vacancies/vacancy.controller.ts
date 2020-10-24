@@ -17,8 +17,15 @@ router.get("/", async (req, res) => {
       const { password, ...employer } = vacancy.employer;
       return (
         { ...vacancy, employer }
+<<<<<<< HEAD
+      )
+    })
+    
+    console.log(vacancies);
+=======
       );
     });
+>>>>>>> 5977cac368ef046df4801b845602bcc06964d9ba
 
     const vacanciesCount = vacancies.length;
     const perPage = 2;

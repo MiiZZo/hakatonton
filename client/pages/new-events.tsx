@@ -43,8 +43,6 @@ export default function NewEventPage() {
           </Box>
         </Flex>
       </Box>
-
-
     </>
   );
 }

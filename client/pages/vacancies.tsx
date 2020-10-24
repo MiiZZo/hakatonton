@@ -1,6 +1,6 @@
-import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu";
-import { NewCards } from "../features/vacancies/vacancy-card";
-import { HeaderTop } from "../features/header";
+import { SumLeftMenu } from "../features/vacancies/vacancy-left-menu/vacancy-left-menu";
+import { NewCards } from "../features/vacancies/vacancy-card/vacancy-card";
+import { HeaderTop } from "../features/header/header";
 import { Button, Box,Flex, Select } from "@chakra-ui/core";
 import { API_URL } from "../constants";
 import { Pagination } from "../features/general/pagination";
@@ -21,8 +21,6 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
     router.push({ query: { page: pageNumber }  });
   }
 
-<<<<<<< HEAD
-=======
   const handleSearch = (e: any) => {
     setSearch(e.target.value);
   }
@@ -30,7 +28,6 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
   const handleSubmitSearch = () => {
     router.push({ query: { search } })
   }
->>>>>>> 8ff862516bcd34cae70979e328c16d5d0d3e8fe5
 
   return (
     <>

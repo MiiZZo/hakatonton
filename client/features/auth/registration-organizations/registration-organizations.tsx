@@ -1,15 +1,33 @@
-import { Box, Input, Checkbox, FormControl, Radio, RadioGroup, FormLabel } from "@chakra-ui/core";
+import {
+  Button,
+  Box,
+  Input,
+  Checkbox,
+  Stack,
+  Flex,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Image,
+  FormControl,
+  Radio,
+  RadioGroup,
+  FormLabel
+} from "@chakra-ui/core";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import { API_URL } from "../../constants";
+import { API_URL } from "../../../constants";
 
-export function RegistrationStudent() {
-  const { handleSubmit, errors, register, formState } = useForm();
+export function RegistrationOrganizations() {
+  const { register, handleSubmit } = useForm();
   const router = useRouter();
 
   function onSubmit(values) {
+    console.log(values);
     const register = async () => {
-      const res = await fetch(`${API_URL}/auth/signup/jobseeker`, {
+      const res = await fetch(`${API_URL}/auth/signup/employer`, {
         mode: "cors",
         method: "post",
         body: JSON.stringify(values),
@@ -47,10 +65,10 @@ export function RegistrationStudent() {
             Фамилия
           </FormLabel>
           <Input
+            name="lastName"
             placeholder="Text"
             w="80%"
             m="0 auto"
-            name="lastName"
             ref={register({ required: true, minLength: 2 })}
           />
         </FormControl>
@@ -58,32 +76,32 @@ export function RegistrationStudent() {
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
             E-mail
           </FormLabel>
-          <Input placeholder="Text" w="80%" m="0 auto" name="email" ref={register({ required: "required" })} />
+          <Input name="email" ref={register({ required: true })} placeholder="Text" w="80%" m="0 auto" />
         </FormControl>
         <FormControl isRequired>
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
             Пароль
           </FormLabel>
           <Input
-            name="password"
             type="password"
             placeholder="Text"
             w="80%"
             m="0 auto"
+            name="password"
             ref={register({ required: true, minLength: 8 })}
           />
         </FormControl>
         <FormControl isRequired>
           <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
-            Дата рождения
+            Телефон
           </FormLabel>
-          <Input
-            name="birthDate"
-            placeholder="Text"
-            w="80%"
-            m="0 auto"
-            ref={register({ required: true, minLength: 8 })}
-          />
+          <Input placeholder="Text" w="80%" m="0 auto" name="phoneNumber" ref={register({ required: true })} />
+        </FormControl>
+        <FormControl isRequired>
+          <FormLabel m="20px 50px 10px 50px" color="#000000" fontWeight="550">
+            Компания
+          </FormLabel>
+          <Input placeholder="Text" name="companyName" ref={register({ required: true })} w="80%" m="0 auto"></Input>
         </FormControl>
         <Box ml="52px" mt="20px">
           <Checkbox border="2px solid #77777" color="#777777" fontSize={16} outline="none" fontWeight={500}>
@@ -105,7 +123,7 @@ export function RegistrationStudent() {
             _hover={{ bg: "#2A69AC" }}
             _focus={{ bg: "#2A69AC" }}
             _active={{ bg: "inherit" }}
-          />
+          ></Input>
         </Box>
       </form>
     </>

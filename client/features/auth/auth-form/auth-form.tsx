@@ -12,11 +12,11 @@ import {
   Radio,
   RadioGroup
 } from "@chakra-ui/core";
-import { RegistrationStudent } from "./registration-student";
-import { RegistrationOrganizations } from "./registration-organizations";
+import { RegistrationStudent } from "../registration-student/registration-student";
+import { RegistrationOrganizations } from "../registration-organizations/registration-organizations";
 import { useState } from "react";
-import { LoginForm } from "./login-form";
-import { User, useUserContext } from "../../store/user";
+import { LoginForm } from "../login-form/login-form";
+import { User, useUserContext } from "../../../store/user";
 
 export function AuthForm() {
   const [formType, setFormType] = useState<"student" | "employer">("student");

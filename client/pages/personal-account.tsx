@@ -7,7 +7,7 @@ import Link from "next/link";
 import { API_URL } from "../constants";
 import { Footer } from "../features/footer/footer"
 
-export default function PersonalAccount({ students }) {
+export default function PersonalAccount({ students = [] }) {
     return (
         <>
             <HeaderTop />
@@ -41,12 +41,12 @@ export default function PersonalAccount({ students }) {
 }
 
 export const getServerSideProps = async () => {
-    const res = await fetch(`${API_URL}/resumes`);
+    const res = await fetch(`${API_URL}/students`);
     const students = await res.json();
 
     return {
         props: {
-            students: []
+            students
         }
     }
 }

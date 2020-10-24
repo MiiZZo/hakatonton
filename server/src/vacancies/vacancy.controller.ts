@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
     }
 
     const vacanciesCount = vacancies.length;
-    const perPage = 2;
+    const perPage = 10;
     const pageCount = Math.ceil(vacanciesCount / perPage);
     let pageNumber = parseInt(page);
 
@@ -48,6 +48,18 @@ router.get("/", async (req, res) => {
       pageNumber,
       pageCount
     });
+});
+
+router.get("/:id", async (req, res) => {
+  const id = Number(req.params.id as string);
+  
+  if (isNaN(id)) {
+    res.status(404);
+    return;
+  }
+
+  const rep = getRepository(Vacancy);
+  const vacancy = rep.findOne({ id });
 });
 
 router.post("/", auth, role("employer"), async (req, res: Response) => {

@@ -9,8 +9,8 @@ export const router = Router();
 router.get("/", async (req, res) => {
     const resumeService = new ResumeService();
     const resumes = await resumeService.getAll();
-    console.log(resumes);
-
+    
+    res.json(resumes);
 });
 
 router.post("/", auth, async (req, res) => {

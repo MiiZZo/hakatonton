@@ -55,6 +55,7 @@ export default function newSummary({ pageCount, pageNumber, vacancies }: Props) 
               </Flex>
               {vacancies.map(vacancy => (
                 <NewCards 
+                  key={vacancy.id}
                   {...vacancy}
                 />
               ))}

@@ -1,6 +1,14 @@
-import { Button, Box, Flex, Heading } from "@chakra-ui/core";
+import { Button, Box, Flex, Heading, Image } from "@chakra-ui/core";
 
-export function NewCards() {
+interface Props {
+  title: string;
+  price: string;
+  name: string;
+  city: string;
+  text: string;
+}
+
+export function NewCards(props: Props) {
   return (
     <Box
       w="1110px"
@@ -13,43 +21,31 @@ export function NewCards() {
       padding="30px 50px"
       m="0px 0 10px 0"
     >
+      <Box
+        zIndex={0}
+        position="absolute"
+        right="-14%"
+        top="-65%"
+        background="#27AE60"
+        boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
+        borderRadius="50%"
+        h={250}
+        w={250}
+      ></Box>
       <Flex justifyContent="space-between" fontSize={20} mb="10px">
-        <Heading as="h3" fontSize="20px">
-          Title Paragraph
-        </Heading>
+        <Box>
+          <Heading as="h3" fontSize="20px">{props.title}</Heading>
+          <Heading as="h3" fontSize="20px" mt="5px" color="#27AE60">{props.price}</Heading>
+        </Box>
         <Box fontSize={20} color="#fff" textAlign="center" padding-bottom="2px">
-          <Box
-            zIndex={0}
-            position="absolute"
-            right="-10%"
-            top="-55%"
-            background="#27AE60"
-            boxShadow="box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.25), inset 0px 0px 23px rgba(0, 0, 0, 0.2)"
-            borderRadius="50%"
-            h={250}
-            w={250}
-          ></Box>
-          <Box zIndex={2} position="absolute" right={5} top={4}>
-            1500 Р
+          <Box zIndex={2} position="absolute" right={5} top={3}>
+            <Image src="/star.svg"></Image>
           </Box>
         </Box>
       </Flex>
-      <Box fontSize="14px" mb="10px">
-        ООО “Моя оборона”
-      </Box>
-      <Box fontSize="14px" mb="10px">
-        г. Брусино
-      </Box>
-      <Box fontSize="16px" mb="10px">
-        Officiis placeat distinctio fuga et. In quis vero architecto? Deserunt
-        rerum quisquam facere exercitationem et natus ut harum quo suscipit
-        dolor eius fugit ex veniam, quas distinctio est tenetur impedit aut
-        eaque, eos laborum ea provident dolore? Iusto? Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
-        venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus
-        non enim praesent elementum facilisis leo, vel fringilla est ullamcorper
-        eget nulla facilisi etiam dignissim diam quis
-      </Box>
+      <Box fontSize="14px" mb="10px">{props.name}</Box>
+      <Box fontSize="14px" mb="10px">{props.city}</Box>
+      <Box fontSize="16px" mb="10px">{props.text}</Box>
       <Flex justifyContent="space-between" alignItems="center">
         <Box>
           <Box

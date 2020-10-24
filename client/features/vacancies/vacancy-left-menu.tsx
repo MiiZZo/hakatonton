@@ -14,10 +14,11 @@ export function SumLeftMenu() {
         w="350px"
         borderRadius={15}
         border="1px solid #E2E8F0"
-        padding="30px"
+        padding="0"
+        pb="20px"
         mb={10}
       >
-        <Box position="relative" display="inline-block" left="-35px" top="-90px">
+        <Box position="relative" display="inline-block" left="-5px" top="-62px">
           <Input
             placeholder="Text Here"
             w={360}

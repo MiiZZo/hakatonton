@@ -2,7 +2,7 @@ import { Box, Flex, Image, Link } from "@chakra-ui/core";
 
 export function HeaderTop() {
   return (
-    <Flex justifyContent="space-between" alignItems="center" mb="60px">
+    <Flex justifyContent="space-between" alignItems="center" mb="100px">
       <Link
         href="#"
         fontSize={53}

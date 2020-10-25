@@ -12,7 +12,7 @@ export default function AuthPage() {
 
   useEffect(() => {
     if (user.auth) {
-      router.push("/vacancies");
+      router.push("/");
     } else {
       setIsLoading(false);
     }

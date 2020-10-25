@@ -38,7 +38,7 @@ export function RegistrationOrganizations() {
       });
 
       if (res.status === 201) {
-        router.push("/vacancies");
+        router.push("/");
       }
     };
 

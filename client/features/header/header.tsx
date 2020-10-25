@@ -8,11 +8,11 @@ export default {
 export function HeaderTop() {
   return (
     <Flex justifyContent="space-between" alignItems="center" mb="100px">
-      <Link href="/vacancies" fontSize={53} fontWeight={900} pl="50px" _focus={{ border: "none" }}>
+      <Link href="/" fontSize={53} fontWeight={900} pl="50px" _focus={{ border: "none" }}>
         <i>SKFU</i>
       </Link>
       <Flex justifyContent="space-between" mr="50px">
-        <NavLink href="/vacancies">
+        <NavLink href="/">
           <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
             <Box
               className="GreenHover"
@@ -30,7 +30,7 @@ export function HeaderTop() {
             Вакансии
           </Link>
         </NavLink>
-        <NavLink href="/resumes">
+        <NavLink href="/resume">
           <Link href="#" m="0 20px" _focus={{ border: "none" }} position="relative" className="headerLink">
             <Box
             className="GreenHover"

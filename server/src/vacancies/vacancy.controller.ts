@@ -53,6 +53,8 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   const id = Number(req.params.id as string);
   
+
+  
   if (isNaN(id)) {
     res.status(404);
     return;

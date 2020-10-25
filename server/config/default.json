@@ -2,7 +2,7 @@
     "COOKIE_NAME": "qid",
     "SESSION_SECRET": "secret",
     "ORIGIN": "http://localhost:3000",
-    "REDIS_HOST": "83.166.241.137",
+    "REDIS_HOST": "localhost",
     "REDIS_PASS": "11197811aS@",
     "__prod__": false
 }

@@ -1,6 +1,8 @@
-import { Button, Box, Flex, Heading, Image } from "@chakra-ui/core";
+import { Button, Box, Flex, Heading, Image, Link } from "@chakra-ui/core";
+import NavLink from "next/link";
 
 interface Props {
+  id: number;
   title: string;
   salaryFrom: number;
   salaryUpTo: number;
@@ -36,9 +38,13 @@ export function NewCards(props: Props) {
       ></Box>
       <Flex justifyContent="space-between" fontSize={20} mb="10px">
         <Box>
-          <Heading as="h3" fontSize="20px">
-            {props.title}
-          </Heading>
+          <NavLink href={`/vacancy/${props.id}`}>
+            <Link>
+              <Heading as="h3" fontSize="20px">
+                {props.title}
+              </Heading>
+            </Link>
+          </NavLink>
           <Heading as="h3" fontSize="20px" mt="5px" color="#27AE60">
             от {props.salaryFrom} руб.
           </Heading>

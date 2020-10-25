@@ -6,7 +6,7 @@ import { API_URL } from "../constants";
 import { Pagination } from "../features/general/pagination";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Footer } from "../features/footer/footer"
+import { Footer } from "../features/footer/footer";
 
 interface Props {
   vacancies: any[];

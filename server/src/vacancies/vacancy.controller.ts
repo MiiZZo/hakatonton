@@ -59,7 +59,14 @@ router.get("/:id", async (req, res) => {
   }
 
   const rep = getRepository(Vacancy);
-  const vacancy = rep.findOne({ id });
+  const vacancy = await rep.findOne({ id }, { relations: ["employer"] });
+
+  if (!vacancy) {
+    res.status(404);
+    return;
+  }
+
+  res.json(vacancy);
 });
 
 router.post("/", auth, role("employer"), async (req, res: Response) => {

@@ -3,9 +3,10 @@ import { HeaderTop } from "../../features/header/header";
 import { Button, Box, Flex, Select, Image, Stack, Tag, TagLabel, TagCloseButton, Heading } from "@chakra-ui/core";
 import { Footer } from "../../features/footer/footer";
 import { API_URL } from "../../constants";
+import EmployerVacancyPage from "../employer/new-vacancy";
 
 
-export default function AboutVacancies() {
+export default function AboutVacancies({ title, salaryFrom, employer, responsibilities, keySkills, schedule, employment }) {
   return (
     <>
       <Box p="0 10px">
@@ -22,7 +23,7 @@ export default function AboutVacancies() {
         >
           <Box>
             <Heading as="h3" fontSize={24}>
-              Название вакансии
+              {title}
         </Heading>
             <Flex mt={3}>
               <Box padding="0 7px" color="#2D9CDB" border="1px solid #2D9CDB" mr={4} fontSize="12px">
@@ -36,16 +37,16 @@ export default function AboutVacancies() {
           </Box>
             </Flex>
             <Box fontSize={24} mt={10} fontWeight="550">
-              от 150 000 руб.
+              от {salaryFrom} руб.
         </Box>
             <Flex mt="10" alignItems="center">
               <Box borderRadius="50%" w={86} h={86} backgroundColor="#ccc"></Box>
               <Box>
                 <Box fontSize={24} ml={6} fontWeight="550">
-                  ООО “Моя оборона”
+                  {employer.companyName}
             </Box>
                 <Box fontSize={24} ml={6} fontWeight="550">
-                  г. Новоебенёво
+                  
             </Box>
               </Box>
             </Flex>
@@ -58,40 +59,25 @@ export default function AboutVacancies() {
               Обязанности
         </Box>
             <Box fontSize={18} mt={5}>
-              – это, другое, третье, пятое, десятьое.
+              {responsibilities}
         </Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
             <Box fontSize={24} mt={10} fontWeight="550">
-              Требования
+              Ключевые навыки
         </Box>
             <Box fontSize={18} mt={5}>
-              – это, другое, третье, пятое, десятьое.
+              {keySkills}
         </Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
             <Box fontSize={24} mt={10} fontWeight="550">
-              Мы предлагаем
+              График работы
         </Box>
             <Box fontSize={18} mt={5}>
-              – это, другое, третье, пятое, десятьое.
+              {schedule}
         </Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
-            <Box fontSize={18}>– это, другое, третье, пятое, десятьое.</Box>
             <Box fontSize={18} mb={10}>
-              – это, другое, третье, пятое, десятьое.
         </Box>
-
-          </Box>
-
-          <Box>
-
           </Box>
         </Box>
       </Box>
-
       <Footer />
     </>
   );
@@ -99,4 +85,15 @@ export default function AboutVacancies() {
 
 export const getServerSideProps = async ({ params: { id } }) => {
     const res = await fetch(`${API_URL}/vacancies/${id}`);
+    let data = {};
+
+    if (res.ok) {
+      data = await res.json();
+    }
+
+    return {
+      props: {
+        ...data
+      }
+    };
 }

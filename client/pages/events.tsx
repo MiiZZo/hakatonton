@@ -10,8 +10,7 @@ export default function EventPage() {
       <Box m="0 auto" maxW={1670} padding="0px 20px">
         <HeaderTop />
         <Flex justifyContent="space-between" alignItems="flex-start">
-          <SumLeftMenu />
-
+          <SumLeftMenu handleSearch={() => {}} handleSubmitSearch={() => {}}/>
           <Box mt="-65px">
             <Flex>
               <Heading fontSize={36} mb="20px" ml="50px">

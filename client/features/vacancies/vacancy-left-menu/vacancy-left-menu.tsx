@@ -47,7 +47,7 @@ export function SumLeftMenu({ handleSearch, handleSubmitSearch }: Props) {
               <Box>Санкт-Петербург</Box>
               <Box>33643</Box>
             </Flex>
-            <Box opacity="0.5" fontSize="12px">
+            <Box fontSize="12px">
               Ещё 158
             </Box>
           </Box>
@@ -96,7 +96,7 @@ export function SumLeftMenu({ handleSearch, handleSubmitSearch }: Props) {
               <Box>Бухгатлерия</Box>
               <Box>1525</Box>
             </Flex>
-            <Box opacity="0.5" fontSize="12px">
+            <Box fontSize="12px">
               Ещё 158
             </Box>
           </Box>

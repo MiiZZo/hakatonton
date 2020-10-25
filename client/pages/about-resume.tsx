@@ -82,7 +82,6 @@ export default function AboutVacancies() {
               – это, другое, третье, пятое, десятьое.
         </Box>
         <Box mb="30px"><Button background="#27AE60" color="#fff" fontSize="18px" _hover={{ background: "#27AE60" }} _focus={{ outline: 'none' }}>Отправить свою заявку</Button></Box>
-
           </Box>
 
           <Box>

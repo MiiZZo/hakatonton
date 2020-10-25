@@ -12,7 +12,7 @@ export default function PersonalAccount({ students = [] }) {
         <>
             <HeaderTop />
             <Flex maxW={1670} margin="0 auto" padding="0 20px">
-                <SumLeftMenu />
+                <SumLeftMenu handleSearch={() => {}} handleSubmitSearch={() => {}} />
                 <Box w="1110px" ml="50px">
                     <Flex justifyContent="space-between" mt="-60px">
                         <Flex flexDirection="column" h="300px" background="linear-gradient(135deg, #FFFFFF 0%, #FDFDFD 100%)" rounded={14} border="1px solid #CBD5E0" w="500px" padding="10px 20px">
